@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    
+    <TextView
+        android:id="@+id/bus_stop_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="default_text" 
+        />
+    <TextView
+        android:id="@+id/bus_routes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="default_text" 
+        android:layout_below="@id/bus_stop_name"
+        />
+    <TextView
+        android:id="@+id/bus_coordinates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="default_text" 
+        android:layout_below="@id/bus_routes"
+        />
+    
+    <Button android:id="@+id/send_message"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/button_text"
+    	    android:onClick="alarmWatch"
+    	    android:layout_below="@id/bus_coordinates"
+    	    >
+    </Button>
+    	
+    <TextView
+        android:id="@+id/gps_coordinates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current location: " 
+        android:layout_below="@id/send_message"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/gps_coordinates"
+        />
+    
+     <TextView
+        android:id="@+id/gps_coordinates_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="default_text" 
+        android:layout_below="@id/gps_coordinates"
+        />
+</RelativeLayout>
